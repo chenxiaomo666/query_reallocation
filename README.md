@@ -1,0 +1,2 @@
+# query_reallocation
+定时查询部分学校的调剂信息发布情况
