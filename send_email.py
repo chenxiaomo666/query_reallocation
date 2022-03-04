@@ -1,20 +1,15 @@
 import smtplib
+from config import Config
 from email.mime.text import MIMEText
 from email.mime.multipart import MIMEMultipart
 
 
 def send_email(title, contain, file_name):
-    # 设置服务器所需信息
-    # 163邮箱服务器地址
-    mail_host = 'smtp.163.com'
-    # 163用户名
-    mail_user = '1*********3'
-    # 密码(部分邮箱为授权码)
-    mail_pass = 'B*********G'
-    # 邮件发送方邮箱地址
-    sender = '13*********3@163.com'
-    # 邮件接受方邮箱地址，注意需要[]包裹，这意味着你可以写多个邮件地址群发
-    receivers = ["m******2@163.com", "2******9@qq.com"]
+    mail_host = Config.mail_host
+    mail_user = Config.mail_user
+    mail_pass = Config.mail_pass
+    sender = Config.sender
+    receivers = Config.receivers
 
     # 设置email信息
     # 邮件内容设置
